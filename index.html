@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="hexagons.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <ul id="hexGrid"></ul>
+    <template id="avatar_img">
+      <li class="hex">
+        <div class="hexIn">
+          <a class="hexLink"> </a>
+        </div>
+      </li>
+    </template>
+  </body>
+  <script>
+    function add_img(img) {
+      let tpl = document.querySelector("#avatar_img");
+      let tpl_container = tpl.content.querySelector(".hexLink");
+      tpl_container.innerHTML = "";
+      img_prefix = "/assets/";
+      if (img.includes("#")) {
+        if (img.includes(".svg")) {
+          var img_element = document.createElement("embed");
+        } else {
+          var img_element = document.createElement("img");
+        }
+      } else {
+        var img_element = document.createElement("img");
+        img_prefix = img_prefix + "data/";
+      }
+      img_element.src = img_prefix + img;
+      tpl_container.appendChild(img_element);
+
+      let layout = document.getElementById("hexGrid");
+      let clone = document.importNode(tpl.content, true);
+      layout.appendChild(clone);
+    }
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var photos = JSON.parse(this.responseText);
+        var idx = 0;
+        var ifs_logo_id = 9;
+        photos.forEach((img) => {
+          idx++;
+          if(idx === ifs_logo_id) add_img("ifs-logo.png#");
+          add_img(img);
+        });
+        add_img("ifs-title.svg#");
+      }
+    };
+    xhttp.open("GET", "photos.json", true);
+    xhttp.send();
+  </script>
+</html>

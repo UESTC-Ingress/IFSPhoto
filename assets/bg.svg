@@ -1,0 +1,14 @@
+<svg version="1.1" baseProfile="full" width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+    <text x="64" y="182" font-family="sans-serif" font-weight="bold" text-anchor="middle" font-size="24" fill="gray">
+        Ingress FS
+    </text>
+    <text x="64" y="212" font-family="sans-serif" font-weight="normal" text-anchor="middle" font-size="24" fill="gray">
+        21.05
+    </text>
+    <text x="192" y="54" font-family="sans-serif" font-weight="normal" text-anchor="middle" font-size="24" fill="gray">
+        Sichuan
+    </text>
+    <text x="192" y="84" font-family="sans-serif" font-weight="normal" text-anchor="middle" font-size="24" fill="gray" font-style="italic">
+        Suining
+    </text>
+</svg>

@@ -1,0 +1,12 @@
+<svg version="1.1" viewBox="0 0 512 512"  preserveAspectRatio="xMidYMid meet" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+    <rect width="512" height="512" fill="white" />
+    <text x="256" y="186" font-family="sans-serif" font-weight="bold" text-anchor="middle" font-size="52">
+        Ingress FS
+    </text>
+    <text x="256" y="266" font-family="sans-serif" font-weight="normal" text-anchor="middle" font-size="52">
+        Chengdu
+    </text>
+    <text x="256" y="336" font-family="sans-serif" font-weight="normal" text-anchor="middle" font-size="42">
+        21.05 - <tspan font-style="italic">Suining</tspan>
+    </text>
+</svg>
